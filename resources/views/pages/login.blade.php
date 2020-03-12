@@ -311,7 +311,7 @@
     }
 
     function proses_login() {
-
+        Swal.showLoading();
       var object = {};
       object.headers = {};
       object.headers['X-CSRF-TOKEN'] = CSRF;
@@ -321,6 +321,7 @@
       object.processData = false;
         object.contentType = false;
       object.success = function (result) {
+          Swal.close();
         if(result.status == "success"){
           location.href = `${BASE_URL}${result.redirect_route}`;
           return;
