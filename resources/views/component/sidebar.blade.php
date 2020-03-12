@@ -21,7 +21,7 @@
           <div class="user-info">
             <a data-toggle="collapse" href="#collapseExample" class="username">
               <span>
-                Test
+                {{session('name')}}
                 <b class="caret"></b>
               </span>
             </a>
@@ -39,13 +39,33 @@
         </div>
         <ul class="nav">
           <li class="nav-item @yield('active-dashboard') ">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{route('dashboard')}}">
               <i class="material-icons">dashboard</i>
               <p> Dashboard </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
+              <i class="material-icons">content_paste</i>
+              <p> Master Data
+                <b class="caret"></b>
+              </p>
+            </a>
+          </li>
+          <div class="collapse @yield('show-master')" id="pagesExamples">
+            <ul class="nav">
+              <li class="nav-item @yield('active-user')">
+                <a class="nav-link " href="{{route('master_users')}}">
+                  <span class="sidebar-mini"> <i class="material-icons">person_add</i> </span>
+                  <span class="sidebar-normal"> 
+                  <p>  Master User </p> 
+                </span>
+                </a>
+              </li>
+            </ul>
+          </div>
           <li class="nav-item ">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{route('logout')}}">
               <i class="material-icons">exit_to_app</i>
               <p> Logout </p>
             </a>

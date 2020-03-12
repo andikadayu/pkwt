@@ -22,13 +22,13 @@
 
 <body class="">  
   <div class="wrapper">
-    @include('Component.sidebar')
+    @include('component.sidebar')
     <div class="main-panel">
-      @include('Component.navbar')
+      @include('component.navbar')
       <div class="content">
         @yield('content')
       </div>
-      @include('Component.footer')
+      @include('component.footer')
     </div>
   </div>
 
