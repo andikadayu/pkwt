@@ -44,6 +44,13 @@
               <p> Dashboard </p>
             </a>
           </li>
+          <li class="nav-item @yield('active-karyawan') ">
+            <a class="nav-link" href="{{route('karyawan')}}">
+              <i class="material-icons">assignment_ind</i>
+              <p> Karyawan </p>
+            </a>
+          </li>
+          @if(session('role') == 'Administrator')
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
               <i class="material-icons">content_paste</i>
@@ -58,12 +65,13 @@
                 <a class="nav-link " href="{{route('master_users')}}">
                   <span class="sidebar-mini"> <i class="material-icons">person_add</i> </span>
                   <span class="sidebar-normal"> 
-                  <p>  Master User </p> 
-                </span>
+                    <p>  Master User </p> 
+                  </span>
                 </a>
               </li>
             </ul>
           </div>
+          @endif
           <li class="nav-item ">
             <a class="nav-link" href="{{route('logout')}}">
               <i class="material-icons">exit_to_app</i>
@@ -82,7 +90,7 @@
           </div>
         </div>
       </div>
-      <div class="sidebar-background" style="background-image: url(../assets/img/sidebar-1.jpg) ">
+      <div class="sidebar-background" style="background-image: {{asset('assets/img/sidebar-1.jpg')}}">
 
       </div>
     </div>

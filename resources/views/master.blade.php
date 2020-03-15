@@ -65,8 +65,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
   <!-- Library for adding dinamically elements -->
   <script src="{{ asset('assets/js/plugins/arrive.min.js')}}"></script>
-  <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
   <!-- Chartist JS -->
   <script src="{{ asset('assets/js/plugins/chartist.min.js')}}"></script>
   <!--  Notifications Plugin    -->
@@ -74,8 +72,6 @@
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <!-- Material Dashboard DEMO methods, don't include it in your project! --> 
   <script src="{{ asset('assets/js/material-dashboard.js')}}" type="text/javascript"></script>
-  <!-- CHART JS -->
-  <script src="{{asset('js/Chart.js')}}"></script>
 
   <script>
     $(document).ready(function() {

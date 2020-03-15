@@ -30,7 +30,7 @@ class LoginController extends Controller
         if ($condition) {
             Session::put('is_login', true);
             Session::put('id',$user->id);         
-            Session::put('name',$user->nama);
+            Session::put('name',$user->nama_user);
             Session::put('role',$user->role);
             return [
                 "status" => "success",

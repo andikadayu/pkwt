@@ -20,7 +20,8 @@ class MasterUserController extends Controller
     {
         $insert=DB::table('tb_user')
             ->insert([
-                'nama' => $request->input('nama'),
+                'nama_user' => $request->input('nama_user'),
+                'alamat_user' => $request->input('alamat_user'),
                 'username' => $request->input('username'),
                 'password' => $request->input('password'),
                 'role' => $request->input('role')
@@ -45,7 +46,8 @@ class MasterUserController extends Controller
         $update=DB::table('tb_user')
             ->where('id',$request->input('id'))
             ->update([
-                'nama' => $request->input('nama'),
+                'nama_user' => $request->input('nama_user'),
+                'alamat_user' => $request->input('alamat_user'),
                 'username' => $request->input('username'),
                 'password' => $request->input('password'),
                 'role' => $request->input('role')
