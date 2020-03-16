@@ -22,19 +22,8 @@
             <a data-toggle="collapse" href="#collapseExample" class="username">
               <span>
                 {{session('name')}}
-                <b class="caret"></b>
               </span>
             </a>
-            <div class="collapse @yield('show-profile')" id="collapseExample">
-              <ul class="nav">
-                <li class="nav-item @yield('active-profile')">
-                  <a class="nav-link" href="#">
-                    <span class="sidebar-mini"> UP </span>
-                    <span class="sidebar-normal"> User Profile </span>
-                  </a>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
         <ul class="nav">
@@ -72,6 +61,12 @@
             </ul>
           </div>
           @endif
+          <!-- <li class="nav-item ">
+            <a class="nav-link" href="#">
+              <i class="material-icons">file_copy</i>
+              <p> Cetak </p>
+            </a>
+          </li> -->
           <li class="nav-item ">
             <a class="nav-link" href="{{route('logout')}}">
               <i class="material-icons">exit_to_app</i>

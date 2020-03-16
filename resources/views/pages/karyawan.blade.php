@@ -991,7 +991,9 @@ function form_update_karyawan() {
 			$('#tunjangan_makan').val(data[0].tunjangan_makan),
 			$('#tunjangan_transport').val(data[0].tunjangan_transport),
 			$('#tunjangan_komunikasi').val(data[0].tunjangan_komunikasi),
-			$('#tunjangan_domisili').val(data[0].tunjangan_domisili)
+			$('#tunjangan_domisili').val(data[0].tunjangan_domisili),
+			$('#gaji_kotor').val(data[0].gaji_kotor),
+			$('#total_gaji').val(data[0].total_gaji)
 		})
 	}
 
