@@ -207,7 +207,7 @@ class KaryawanController extends Controller
 				'durasi' => $request->input('durasi'),
 				'gaji_thp' => $request->input('gaji_thp'),
 				'status_karyawan' => $request->input('status_karyawan'),
-				'direktur_update_by' => Session::get('id_user'),
+				'direktur_update_by' => Session::get('id'),
 				'direktur_update_at' => $time
 			]);
 		if ($updates) {
@@ -256,7 +256,7 @@ class KaryawanController extends Controller
 				'tunjangan_domisili'=>$request->input('tunjangan_domisili'),
 				'gaji_kotor' => $request->input('gaji_kotor'),
 				'total_gaji' => $request->input('total_gaji'),
-				'hrd_update_by' => Session::get('id_user'),
+				'hrd_update_by' => Session::get('id'),
 				'hrd_update_at' => $time
 			]);
 		if($updates){
