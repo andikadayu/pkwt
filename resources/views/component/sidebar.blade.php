@@ -61,12 +61,12 @@
             </ul>
           </div>
           @endif
-          <!-- <li class="nav-item ">
-            <a class="nav-link" href="#">
+          <li class="nav-item @yield('active-cetak')">
+            <a class="nav-link" href="{{route('v_cetak')}}">
               <i class="material-icons">file_copy</i>
               <p> Cetak </p>
             </a>
-          </li> -->
+          </li>
           <li class="nav-item ">
             <a class="nav-link" href="{{route('logout')}}">
               <i class="material-icons">exit_to_app</i>

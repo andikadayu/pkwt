@@ -48,5 +48,9 @@ Route::group(['middleware' => ['cek_login']], function () {
     Route::post('save-hrd','KaryawanController@save_hrd')->name('save_hrd');
     Route::get('reset-hrd','KaryawanController@reset_hrd')->name('reset_hrd');
     Route::get('view-dt-karyawan','KaryawanController@view_dt_karyawan')->name('view_dt_karyawan');
-
+    Route::get('view-gambar-load','KaryawanController@view_gambar_load')->name('view_gambar_load');
+    
+    // Cetak Perjanjian
+    Route::get('cetak','CetakController@index')->name('v_cetak');
+    Route::get('cetak-pdf','CetakController@cetak_pdf')->name('cetak_pdf');
 });

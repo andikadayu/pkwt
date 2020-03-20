@@ -296,4 +296,19 @@ class KaryawanController extends Controller
 			->get();
 		return $data;
 	}
+
+	public function view_gambar_load(Request $request)
+	{
+		$data=DB::table('tb_karyawan')
+			->where('id_karyawan',$request->get('id'))
+			->first();
+		$url=url('public/foto_ktp/'.$data->img_ktp);
+		$urls=url('public/foto_npwp/'.$data->img_npwp);
+
+		echo "
+		<h3 class='text-center'>Foto KTP</h3>
+		<img src='$url' class='rounded mx-auto d-block img-fluid'>
+		<h3 class='text-center'>Foto NPWP</h3>
+		<img src='$urls' class='rounded mx-auto d-block img-fluid'>";
+	}
 }
